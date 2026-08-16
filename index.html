@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Portfólio</title>
   <link rel="stylesheet" href="style_projetos.css">
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
 
@@ -18,8 +20,11 @@
 
     <section class="projetos">
       <div class="projeto">
-        <h3>Projeto 1</h3>
-        <p>Descrição do meu primeiro projeto de programação.</p>
+        <h3>Projeto 1 | Python</h3>
+        <p>Descrição do meu primeiro projeto de programação. 
+            <br>
+            Consiste em um simuldador de Cadastro em Python.
+        </p>
         <a href="#" target="_blank">Ver projeto</a>
       </div>
 
@@ -32,7 +37,40 @@
       <div class="projeto">
         <h3>Projeto 3</h3>
         <p>Descrição do meu terceiro projeto de programação.</p>
-        <a href="#" target="_blank">Ver projeto</a>
+        <a href="print("Cadastro".center(100, "-"))
+
+while True:
+    
+    nome = input("Digite seu primeiro nome: ")
+    sobrenome = input("Digite seu sobrenome: ")
+    idade = input("Digite sua Idade: ")
+    sexo = input("Digite seu sexo: ")
+    contato = input("Digite seu numero de contato: ")
+    email = input("Digite seu numero Email: ")
+
+# Dicionário -------------------------------------------------
+
+    cadastro = {
+            'nome': nome,
+            'sobrenome': sobrenome,
+            'idade': idade,
+            'sexo': sexo,
+            'contato': contato,
+            'email': email
+        }
+
+
+    
+    print('Dados'.center(70,"-"))
+    for Chave, Dados in cadastro.items():
+        print(f'{Chave}: {Dados}')
+    laço = input('Deseja realizar outro Cadastro? Sim / Não  ')
+    if laço == "Sim".lower():
+        continue
+    else:
+        break
+
+print (f'Obrigado pelo cadastro! Tenha um ótimo dia!!'.center(40, "-"))" target="_blank">Ver projeto</a>
       </div>
     </section>
   </main>
