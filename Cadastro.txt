@@ -1,0 +1,34 @@
+print("Cadastro".center(100, "-"))
+
+while True:
+    
+    nome = input("Digite seu primeiro nome: ")
+    sobrenome = input("Digite seu sobrenome: ")
+    idade = input("Digite sua Idade: ")
+    sexo = input("Digite seu sexo: ")
+    contato = input("Digite seu numero de contato: ")
+    email = input("Digite seu numero Email: ")
+
+# Dicionário -------------------------------------------------
+
+    cadastro = {
+            'nome': nome,
+            'sobrenome': sobrenome,
+            'idade': idade,
+            'sexo': sexo,
+            'contato': contato,
+            'email': email
+        }
+
+
+    
+    print('Dados'.center(70,"-"))
+    for Chave, Dados in cadastro.items():
+        print(f'{Chave}: {Dados}')
+    laço = input('Deseja realizar outro Cadastro? Sim / Não  ')
+    if laço == "Sim".lower():
+        continue
+    else:
+        break
+
+print (f'Obrigado pelo cadastro! Tenha um ótimo dia!!'.center(40, "-"))
