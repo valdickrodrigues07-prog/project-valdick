@@ -7,7 +7,7 @@ while True:
     idade = input("Digite sua Idade: ")
     sexo = input("Digite seu sexo: ")
     contato = input("Digite seu numero de contato: ")
-    email = input("Digite seu numero Email: ")
+    email = input("Digite seu Email: ")
 
 # Dicionário -------------------------------------------------
 
