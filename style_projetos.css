@@ -1,15 +1,199 @@
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#0f172a;color:#fff;line-height:1.6}
-header{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#2563eb,#7c3aed)}
-header h1{font-size:3rem;margin-bottom:10px}
-header p{font-size:1.2rem;color:#e2e8f0}
-main{max-width:1100px;margin:auto;padding:50px 20px}
-h2{margin-bottom:25px;font-size:2rem}
-.projetos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
-.projeto{background:#1e293b;padding:25px;border-radius:15px;transition:.3s}
-.projeto:hover{transform:translateY(-8px);background:#263449}
-.projeto h3{color:#60a5fa;margin-bottom:10px}
-.projeto p{color:#cbd5e1;margin-bottom:20px}
-.projeto a{display:inline-block;padding:10px 16px;background:#2563eb;color:white;text-decoration:none;border-radius:8px}
-footer{text-align:center;padding:30px;color:#94a3b8}
-.github{background-color: #0f172a;color: #cbd5e1;padding: 10px 16px;}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #080d16;
+  --bg-secondary: #0d1421;
+  --card: #111a29;
+  --card-hover: #152238;
+  --border: #1e2d43;
+
+  --blue: #3b82f6;
+  --blue-hover: #60a5fa;
+  --blue-dark: #172554;
+
+  --text: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+
+header {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px 90px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.14), transparent 45%),
+    var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+header::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 2px;
+  margin: 28px auto 0;
+  background: var(--blue);
+  border-radius: 2px;
+}
+
+header h1 {
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+}
+
+header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* Conteúdo */
+
+main {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+/* Projetos */
+
+.projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.projeto {
+  position: relative;
+  padding: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.projeto:hover {
+  transform: translateY(-4px);
+  background: var(--card-hover);
+  border-color: #2b4d7a;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.projeto h3 {
+  color: var(--blue-hover);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.projeto p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 22px;
+}
+
+/* Botões */
+
+.projeto a,
+.github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 15px;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.projeto a {
+  background: var(--blue);
+  color: #fff;
+  border: 1px solid var(--blue);
+}
+
+.projeto a:hover {
+  background: var(--blue-hover);
+  border-color: var(--blue-hover);
+  color: #07101f;
+}
+
+/* GitHub */
+
+.github {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.github:hover {
+  color: var(--text);
+  background: var(--blue-dark);
+  border-color: #315a91;
+}
+
+/* Footer */
+
+footer {
+  padding: 35px 20px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+/* Responsivo */
+
+@media (max-width: 600px) {
+  header {
+    padding: 75px 20px 65px;
+  }
+
+  main {
+    padding: 50px 18px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .projeto {
+    padding: 22px;
+  }
+}
