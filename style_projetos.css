@@ -143,6 +143,19 @@ main h2 {
 .acao--ghost { color: var(--ink-soft); border-color: var(--line); }
 .acao--ghost:hover { color: var(--pen); border-color: var(--pen); }
 
+.acao--baixar {
+  background: var(--pen);
+  color: var(--paper);
+  border: 1px solid var(--pen);
+  border-radius: 2px;
+  padding: 8px 14px 9px;
+}
+.acao--baixar:hover {
+  background: var(--pen-hover);
+  border-color: var(--pen-hover);
+  color: var(--paper);
+}
+
 .ficha--vazia {
   border-style: dashed;
   background-image: repeating-linear-gradient(
